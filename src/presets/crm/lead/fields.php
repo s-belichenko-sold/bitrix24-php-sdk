@@ -1,11 +1,11 @@
 <?php
+
 namespace Bitrix24\Presets\CRM\Lead;
 
 /**
  * Class Fields
  * @link http://www.bitrixsoft.com/rest_help/crm/leads/crm_lead_fields.php
  * @package Bitrix24\Presets\CRM\Lead
- * @todo check fields
  */
 class Fields
 {
@@ -18,11 +18,11 @@ class Fields
 	 */
 	const TITLE = 'TITLE';
 	/**
-	 * @var string Contact person’s name	. Can be read, can be write
+	 * @var string Contact person’s name    . Can be read, can be write
 	 */
 	const NAME = 'NAME';
 	/**
-	 * @var string Contact person’s patronymic.	Can be read, can be write
+	 * @var string Contact person’s patronymic.    Can be read, can be write
 	 */
 	const SECOND_NAME = 'SECOND_NAME';
 	/**
@@ -38,7 +38,7 @@ class Fields
 	 */
 	const SOURCE_ID = 'SOURCE_ID';
 	/**
-	 * @var string 	Additional information about the source. Can be read, can be write
+	 * @var string    Additional information about the source. Can be read, can be write
 	 */
 	const SOURCE_DESCRIPTION = 'SOURCE_DESCRIPTION';
 	/**
@@ -54,19 +54,47 @@ class Fields
 	 */
 	const POST = 'POST';
 	/**
-	 * @var string 	Address	Can be read, can be write
+	 * @var string    Address    Can be read, can be write
 	 */
 	const  ADDRESS = 'ADDRESS';
 	/**
-	 * @var string 	Address	Can be read, can be write
+	 * @var string Address    Can be read, can be write
 	 */
-	const  ADDRESS_APARTMENT = 'ADDRESS_2';
+	const ADDRESS_APARTMENT = 'ADDRESS_2';
 	/**
-	 * @var integer Currency ID	Can be read, can be write
+	 * @var string Address Can be read, can be write
+	 */
+	const ADDRESS_CITY = 'ADDRESS_CITY';
+	/**
+	 * @var string Address Can be read, can be write
+	 */
+	const ADDRESS_COUNTRY = 'ADDRESS_COUNTRY';
+	/**
+	 * @var string Address Can be read, can be write
+	 */
+	const ADDRESS_COUNTRY_CODE = 'ADDRESS_COUNTRY_CODE';
+	/**
+	 * @var string Address Can be read, can be write
+	 */
+	const ADDRESS_POSTAL_CODE = 'ADDRESS_POSTAL_CODE';
+	/**
+	 * @var string Address Can be read, can be write
+	 */
+	const ADDRESS_PROVINCE = 'ADDRESS_PROVINCE';
+	/**
+	 * @var string Address Can be read, can be write
+	 */
+	const ADDRESS_REGION = 'ADDRESS_REGION';
+	/**
+	 * @var string birthday date
+	 */
+	const BIRTHDATE = 'BIRTHDATE';
+	/**
+	 * @var string Currency ID    Can be read, can be write
 	 */
 	const CURRENCY_ID = 'CURRENCY_ID';
 	/**
-	 * @var float Supposed amount Can be read, can be write
+	 * @var string Supposed amount Can be read, can be write
 	 */
 	const OPPORTUNITY = 'OPPORTUNITY';
 	/**
@@ -74,35 +102,35 @@ class Fields
 	 */
 	const OPENED = 'OPENED';
 	/**
-	 * @var string Comments	Can be read, can be write
+	 * @var string Comments    Can be read, can be write
 	 */
 	const COMMENTS = 'COMMENTS';
 	/**
-	 * @var integer Responsible person	Can be read, can be write
+	 * @var integer Responsible person    Can be read, can be write
 	 */
 	const ASSIGNED_BY_ID = 'ASSIGNED_BY_ID';
 	/**
-	 * @var integer Created by	Can be read, can't write
+	 * @var integer Created by    Can be read, can't write
 	 */
 	const CREATED_BY_ID = 'CREATED_BY_ID';
 	/**
-	 * @var integer Modified by	Can be read, can't write
+	 * @var integer Modified by    Can be read, can't write
 	 */
 	const MODIFY_BY_ID = 'MODIFY_BY_ID';
 	/**
-	 * @var \DateTime Creation date	Can be read, can't write
+	 * @var string Creation date    Can be read, can't write
 	 */
 	const DATE_CREATE = 'DATE_CREATE';
 	/**
-	 * @var \DateTime Modification date	Can be read, can't write
+	 * @var string  \DateTime Modification date    Can be read, can't write
 	 */
 	const DATE_MODIFY = 'DATE_MODIFY';
 	/**
-	 * @var integer Company ID	Can be read, can't write
+	 * @var integer Company ID    Can be read, can't write
 	 */
 	const COMPANY_ID = 'COMPANY_ID';
 	/**
-	 * @var integer Contact person’s ID	Can be read, can't write
+	 * @var integer Contact person’s ID    Can be read, can't write
 	 */
 	const CONTACT_ID = 'CONTACT_ID';
 	/**
@@ -118,19 +146,53 @@ class Fields
 	 */
 	const EMAIL = 'EMAIL';
 	/**
-	 * @var string Website	Can be read, can be write
+	 * @var string Website    Can be read, can be write
 	 */
 	const WEB = 'WEB';
 	/**
-	 * @var string Contact person in the instant messaging service	Can be read, can be write
+	 * @var string Contact person in the instant messaging service    Can be read, can be write
 	 */
 	const IM = 'IM';
 	/**
-	 * @var string External information base ID. Field assignment can be changed by the end developer. Can be read, can be write
+	 * @var string External information base ID. Field assignment can be changed by the end developer. Can be read, can
+	 *      be write
 	 */
 	const ORIGINATOR_ID = 'ORIGINATOR_ID';
 	/**
-	 * @var string External key that is used for exchange operations. ID of an object of the external information database. The field assignment can be modified by the end developer. Can be read, can be write
+	 * @var string External key that is used for exchange operations. ID of an object of the external information
+	 *      database. The field assignment can be modified by the end developer. Can be read, can be write
 	 */
 	const ORIGIN_ID = 'ORIGIN_ID';
+	/**
+	 * @var string сan be read and write.
+	 */
+	const HAS_EMAIL = 'HAS_EMAIL';
+	/**
+	 * @var string сan be read and write.
+	 */
+	const HAS_PHONE = 'HAS_PHONE';
+	/**
+	 * @var string сan be read and write.
+	 */
+	const HONORIFIC = 'HONORIFIC';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_CAMPAIGN = 'UTM_CAMPAIGN';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_CONTENT = 'UTM_CONTENT';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_MEDIUM = 'UTM_MEDIUM';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_SOURCE = 'UTM_SOURCE';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_TERM = 'UTM_TERM';
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace Bitrix24\Presets\CRM\Contact;
 /**
  * Class Fields
@@ -8,137 +9,176 @@ namespace Bitrix24\Presets\CRM\Contact;
 class Fields
 {
 	/**
-	 * @var integer ID - GUID contact identifier, created automatically. Can be read and write.
+	 * @var string ADDRESS Contact address, сan be read and write.
 	 */
-	const	ID = "ID";
-
+	const ADDRESS = 'ADDRESS';
 	/**
-	 * @var string NAME - Name of contact, required. Can be read and write.
+	 * @var string Address Can be read, can be write
 	 */
-	const	NAME = "NAME";
-
+	const ADDRESS_APARTMENT = 'ADDRESS_2';
 	/**
-	 * @var string SECOND_NAME - Second name of contact, required. Can be read and write.
+	 * @var string Address Can be read, can be write
 	 */
-	const	SECOND_NAME = "SECOND_NAME";
-
+	const ADDRESS_CITY = 'ADDRESS_CITY';
 	/**
-	 * @var string LAST_NAME - Last name of contact, required. Can be read and write.
+	 * @var string Address Can be read, can be write
 	 */
-	const	LAST_NAME = "LAST_NAME";
-
+	const ADDRESS_COUNTRY = 'ADDRESS_COUNTRY';
 	/**
-	 * @var string PHOTO - Photo of contact. Can be read and write.
+	 * @var string Address Can be read, can be write
 	 */
-	const	PHOTO = "PHOTO";
-
+	const ADDRESS_COUNTRY_CODE = 'ADDRESS_COUNTRY_CODE';
 	/**
-	 * @var \DateTime BIRTHDATE - Contact birthdate. Can be read and write.
+	 * @var string Address Can be read, can be write
 	 */
-	const	BIRTHDATE = "BIRTHDATE";
-
+	const ADDRESS_POSTAL_CODE = 'ADDRESS_POSTAL_CODE';
 	/**
-	 * @var crm_status TYPE_ID - Contact type. Can be read and write.
+	 * @var string Address Can be read, can be write
 	 */
-	const	TYPE_ID = "TYPE_ID";
-
+	const ADDRESS_PROVINCE = 'ADDRESS_PROVINCE';
 	/**
-	 * @var crm_status SOURCE_ID - Contact source. Can be read and write.
+	 * @var string Address Can be read, can be write
 	 */
-	const	SOURCE_ID = "SOURCE_ID";
-
+	const ADDRESS_REGION = 'ADDRESS_REGION';
 	/**
-	 * @var string SOURCE_DESCRIPTION - Contact source description, сan be read and write.
+	 * @var integer ASSIGNED_BY_ID - identifier of responsible user for this contact, Can be read and write.
 	 */
-	const	SOURCE_DESCRIPTION = "SOURCE_DESCRIPTION";
-
+	const ASSIGNED_BY_ID = 'ASSIGNED_BY_ID';
 	/**
-	 * @var string POST - Contact post, сan be read and write.
+	 * @var string BIRTHDATE - Contact birthdate. Can be read and write.
 	 */
-	const 	POST = "POST";
-
-	/**
-	 * @var string ADDRESS - Contact address, сan be read and write.
-	 */
-	const	ADDRESS = "ADDRESS";
-
-	/**
-	 * @var string OPENED - is contact opened for all users, сan be read and write.
-	 */
-	const	OPENED = "OPENED";
-
+	const BIRTHDATE = 'BIRTHDATE';
 	/**
 	 * @var string COMMENTS - comments for contact, сan be read and write.
 	 */
-	const	COMMENTS = "COMMENTS";
-
+	const COMMENTS = 'COMMENTS';
+	/**
+	 * @var string COMPANY_ID - crm company identifier, сan be read and write.
+	 */
+	const COMPANY_ID = 'COMPANY_ID';
+	/**
+	 * @var string CREATED_BY_ID - identifier of user who created this contact, read only.
+	 */
+	const CREATED_BY_ID = 'CREATED_BY_ID';
+	/**
+	 * @var string DATE_CREATE - \DateTime create this contact, read only.
+	 */
+	const DATE_CREATE = 'DATE_CREATE';
+	/**
+	 * @var string DATE_MODIFY -  \DateTime date modify this contact, read only.
+	 */
+	const DATE_MODIFY = 'DATE_MODIFY';
+	/**
+	 * @var string EMAIL - crm_multifield contact email, сan be read and write.
+	 */
+	const EMAIL = 'EMAIL';
 	/**
 	 * @var string EXPORT - is contact can be exported from crm, сan be read and write.
 	 */
-	const	EXPORT = "EXPORT";
-
+	const EXPORT = 'EXPORT';
 	/**
-	 * @var integer ASSIGNED_BY_ID - identifier of responsible user for this contact, read only.
+	 * @var string сan be read and write.
 	 */
-	const	ASSIGNED_BY_ID = "ASSIGNED_BY_ID";
-
+	const HAS_EMAIL = 'HAS_EMAIL';
 	/**
-	 * @var integer CREATED_BY_ID - identifier of user who created this contact, read only.
+	 * @var string сan be read and write.
 	 */
-	const	CREATED_BY_ID = "CREATED_BY_ID";
-
+	const HAS_PHONE = 'HAS_PHONE';
 	/**
-	 * @var integer MODIFY_BY_ID - identifier of last user who modify this contact, read only.
+	 * @var string сan be read and write.
 	 */
-	const	MODIFY_BY_ID = "MODIFY_BY_ID";
-
+	const HONORIFIC = 'HONORIFIC';
 	/**
-	 * @var \DateTime DATE_CREATE - date create this contact, read only.
+	 * @var string ID - GUID contact identifier, created automatically. Can be read and write.
 	 */
-	const	DATE_CREATE = "DATE_CREATE";
-
+	const ID = 'ID';
 	/**
-	 * @var \DateTime DATE_MODIFY - date modify this contact, read only.
+	 * @var string crm_multifield  contact instant messenger nick, сan be read and write
 	 */
-	const	DATE_MODIFY = "DATE_MODIFY";
-
+	const IM = 'IM';
 	/**
-	 * @var crm_company COMPANY_ID - crm company identifier, сan be read and write.
+	 * @var string LAST_NAME - Last name of contact, required. Can be read and write.
 	 */
-	const	COMPANY_ID ="COMPANY_ID";
-
+	const LAST_NAME = 'LAST_NAME';
 	/**
-	 * @var crm_lead LEAD_ID - lead identifier, read only.
+	 * @var string LEAD_ID - lead identifier, read only.
 	 */
-	const	LEAD_ID = "LEAD_ID";
-
+	const LEAD_ID = 'LEAD_ID';
 	/**
-	 * @var crm_multifield PHONE - contact phone, сan be read and write.
+	 * @var string MODIFY_BY_ID - identifier of last user who modify this contact, read only.
 	 */
-	const	PHONE = "PHONE";
-
+	const MODIFY_BY_ID = 'MODIFY_BY_ID';
 	/**
-	 * @var crm_multifield EMAIL - contact email, сan be read and write.
+	 * @var string NAME - Name of contact, required. Can be read and write.
 	 */
-	const	EMAIL = "EMAIL";
-
+	const NAME = 'NAME';
 	/**
-	 * @var crm_multifield WEB - contact web-site, сan be read and write.
+	 * @var string OPENED - is contact opened for all users, сan be read and write.
 	 */
-	const	WEB = "WEB";
-
+	const OPENED = 'OPENED';
 	/**
-	 * @var crm_multifield IM - contact instant messenger nick, сan be read and write.
+	 * @var string ORIGINATOR_ID - identifier external information system. Only for developers, сan be read and write.
 	 */
-	const	IM = "IM";
-
+	const ORIGINATOR_ID = 'ORIGINATOR_ID';
 	/**
-	 * @var string ORIGINATOR_ID - identifier external informaton sistem. Only for dewelopers, сan be read and write.
+	 * @var string ORIGIN_ID - extertal key for exchange operations with other systems. Only for dewelopers, сan be
+	 *      read and write.
 	 */
-	const	ORIGINATOR_ID = "ORIGINATOR_ID";
-
+	const ORIGIN_ID = 'ORIGIN_ID';
 	/**
-	 * @var string ORIGIN_ID - extertal key for exchange operations with other systems. Only for dewelopers, сan be read and write.
+	 * @var string
 	 */
-	const	ORIGIN_ID = "ORIGIN_ID";
+	const ORIGIN_VERSION = 'ORIGIN_VERSION';
+	/**
+	 * @var string crm_multifield PHONE - contact phone, сan be read and write.
+	 */
+	const PHONE = 'PHONE';
+	/**
+	 * @var string PHOTO - Photo of contact. Can be read and write.
+	 */
+	const PHOTO = 'PHOTO';
+	/**
+	 * @var string POST - Contact post, сan be read and write.
+	 */
+	const POST = 'POST';
+	/**
+	 * @var string SECOND_NAME - Second name of contact, required. Can be read and write.
+	 */
+	const SECOND_NAME = 'SECOND_NAME';
+	/**
+	 * @var string SOURCE_DESCRIPTION - Contact source description, сan be read and write.
+	 */
+	const SOURCE_DESCRIPTION = 'SOURCE_DESCRIPTION';
+	/**
+	 * @var string SOURCE_ID - Contact source. Can be read and write.
+	 */
+	const SOURCE_ID = 'SOURCE_ID';
+	/**
+	 * @var string crm_status TYPE_ID - Contact type. Can be read and write.
+	 */
+	const TYPE_ID = 'TYPE_ID';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_CAMPAIGN = 'UTM_CAMPAIGN';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_CONTENT = 'UTM_CONTENT';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_MEDIUM = 'UTM_MEDIUM';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_SOURCE = 'UTM_SOURCE';
+	/**
+	 * @var string Can be read and write.
+	 */
+	const UTM_TERM = 'UTM_TERM';
+	/**
+	 * @var string crm_multifield WEB - contact web-site, сan be read and write.
+	 */
+	const WEB = 'WEB';
 }
