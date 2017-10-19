@@ -70,6 +70,54 @@ class Bitrix24Webhook implements iBitrix24Webhook {
 	protected $rawResponse;
 
 	/**
+	 * Bitrix24Webhook constructor.
+	 * @throws Bitrix24Exception
+	 */
+	public function __construct() {
+		if ( ! extension_loaded( 'curl' ) ) {
+			throw new Bitrix24Exception( 'cURL extension must be installed to use this library' );
+		}
+
+		$this->setRetriesToConnectCount( 1 );
+		$this->setRetriesToConnectTimeout( 1000000 );
+	}
+
+	/**
+	 * set CURL request count retries
+	 *
+	 * @param $retriesCnt
+	 *
+	 * @return boolean
+	 *
+	 * @throws  Bitrix24Exception
+	 */
+	public function setRetriesToConnectCount( $retriesCnt = 1 ) {
+		if ( ! is_int( $retriesCnt ) ) {
+			throw new Bitrix24Exception( 'retries to connect count must be an integer' );
+		}
+		$this->retriesToConnectCount = (int) $retriesCnt;
+
+		return true;
+	}
+
+	/**
+	 * set retries to connect timeout in microseconds
+	 *
+	 * @param int $microseconds
+	 *
+	 * @return bool
+	 * @throws Bitrix24Exception
+	 */
+	public function setRetriesToConnectTimeout( $microseconds = 1000000 ) {
+		if ( ! is_numeric( $microseconds ) ) {
+			throw new Bitrix24Exception( 'retries to connect count must be an integer' );
+		}
+		$this->retriesToConnectTimeout = $microseconds;
+
+		return true;
+	}
+
+	/**
 	 * @param       $methodName
 	 * @param array $additionalParameters
 	 *
@@ -114,6 +162,7 @@ class Bitrix24Webhook implements iBitrix24Webhook {
 			throw new Bitrix24Exception( 'application secret is empty' );
 		}
 		$this->applicationSecret = $applicationSecret;
+
 		return true;
 	}
 
