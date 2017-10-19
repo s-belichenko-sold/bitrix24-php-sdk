@@ -195,14 +195,14 @@ class Bitrix24Webhook implements iBitrix24Webhook {
 		if ( null === $this->getDomain() ) {
 			throw new Bitrix24Exception( 'domain not found, you must call setDomain method before' );
 		}
-		if ( null === $this->getAccessToken() ) {
-			throw new Bitrix24Exception( 'access token not found, you must call setAccessToken method before' );
+		if ( null === $this->getApplicationSecret() ) {
+			throw new Bitrix24Exception( 'application secret not found, you must call setAccessToken method before' );
 		}
 		if ( '' === $methodName ) {
 			throw new Bitrix24Exception( 'method name not found, you must set method name' );
 		}
 
-		$url = 'https://' . $this->domain . '/rest/1/' . $this->accessToken . '/' . $methodName;
+		$url = 'https://' . $this->domain . '/rest/1/' . $this->applicationSecret . '/' . $methodName;
 
 		// save method parameters for debug
 		$this->methodParameters = $additionalParameters;
