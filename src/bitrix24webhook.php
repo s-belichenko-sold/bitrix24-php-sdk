@@ -30,9 +30,9 @@ class Bitrix24Webhook implements iBitrix24Webhook {
 	protected $domain;
 
 	/**
-	 * @var string access token
+	 * @var string application secret
 	 */
-	protected $accessToken;
+	protected $applicationSecret;
 
 	/**
 	 * @var array, contain all api-method parameters, will be available after call method
@@ -101,20 +101,19 @@ class Bitrix24Webhook implements iBitrix24Webhook {
 	}
 
 	/**
-	 * Set access token
+	 * Set application secret
 	 *
-	 * @param string $accessToken
+	 * @param string $applicationSecret
 	 *
 	 * @throws Bitrix24Exception
 	 *
-	 * @return true
+	 * @return true;
 	 */
-	public function setAccessToken( $accessToken ) {
-		if ( '' === $accessToken ) {
-			throw new Bitrix24Exception( 'access token is empty' );
+	public function setApplicationSecret( $applicationSecret ) {
+		if ( '' === $applicationSecret ) {
+			throw new Bitrix24Exception( 'application secret is empty' );
 		}
-		$this->accessToken = $accessToken;
-
+		$this->applicationSecret = $applicationSecret;
 		return true;
 	}
 
@@ -128,12 +127,12 @@ class Bitrix24Webhook implements iBitrix24Webhook {
 	}
 
 	/**
-	 * Get access token
+	 * Get application secret
 	 *
-	 * @return string | null
+	 * @return string
 	 */
-	public function getAccessToken() {
-		return $this->accessToken;
+	public function getApplicationSecret() {
+		return $this->applicationSecret;
 	}
 
 	/**
